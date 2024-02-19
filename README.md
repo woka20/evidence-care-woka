@@ -6,12 +6,21 @@
 - Docker Desktop
 - Postman
 
+
+
 ## API Endpoint
 
 - POST "/find-employee-upload"
   form-data:
   name: "evelina,eveleene"
   file: choose file json (Ex: correct-employees.json)
+
+## Run Unit Test
+- Open terminal inside repository, run command:
+```bash
+  mvn clean test
+```
+- Open folder /target/site  click index.html  to get coverage unit test report
 
 ## How To Run App
 
