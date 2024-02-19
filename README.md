@@ -38,12 +38,12 @@ docker build -t evidence-care-woka-image .
 
 ```
 
-5. run command
+6. run command
 ```bash
 docker run -p 8080:8080 evidence-care-woka-image  
 ```
 
-6. Open Postman
+7. Open Postman
    request POST , choose "body" and "form-data"
 
 ## Response
