@@ -29,6 +29,10 @@
 3. Open terminal
 4. run command
 ```bash
+mvn clean package -DskipTests  
+```
+5. run command
+```bash
 
 docker build -t evidence-care-woka-image .  
 
