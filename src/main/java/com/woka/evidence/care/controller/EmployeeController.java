@@ -4,6 +4,8 @@ package com.woka.evidence.care.controller;
 import java.util.Arrays;
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +39,8 @@ public class EmployeeController {
             if (listEmpResp.getError() != null){
                 return ResponseEntity.status(listEmpResp.getHttpStatus()).body(listEmpResp.getError());
 
+            }else if (employees==null){
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Empty or Cannot Read File Uploader");
             }
             return ResponseEntity.ok(listEmpResp.getEmployeeResponses());
       
